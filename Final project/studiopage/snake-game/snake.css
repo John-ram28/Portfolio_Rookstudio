@@ -1,0 +1,25 @@
+/* Center the canvas and style the background */
+body {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #02485a;
+
+}
+
+h1 {
+
+    text-align: center;
+    color: #fd7767;
+
+}
+
+canvas {
+
+    background-image: url(DALL·E\ 2024-11-10\ 19.43.11\ -\ A\ 2D\ top-down\ view\ of\ a\ pixelated\ grass\ floor\ for\ a\ classic\ snake\ game\,\ in\ retro\ video\ game\ style.\ The\ grass\ has\ a\ repetitive\ texture\ with\ various\ sha.webp);
+    background-size: cover;
+    border: 5px solid #db5356;
+
+}

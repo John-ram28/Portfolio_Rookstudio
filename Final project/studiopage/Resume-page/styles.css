@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.blind {
+    width: 300px;
+    height: 50px; /* initial height */
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: height 0.5s ease;
+    overflow: hidden; /* Hide content when collapsed */
+}
+
+.blind.open {
+    height: 500px; /* expanded height */
+}
+
+.resume {
+    display: none; /* Initially hidden */
+    padding: 10px;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: left;
+    border-top: 1px solid #ccc;
+}
+
+.blind.open .resume {
+    display: block; /* Show resume content when the blinds are open */
+}

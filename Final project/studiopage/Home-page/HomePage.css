@@ -1,0 +1,233 @@
+html, body {
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(45deg, #070709, #4b2d2e, #701c1a, #824334, #ae1918, #f42c1d);
+
+}
+
+header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 3;
+
+}
+
+header:hover{
+
+    background: linear-gradient(45deg,  #183bc7, #07f1b7, #fa020a);
+    background-size: 400% 100%;
+    animation: headershift 8s infinite linear;
+
+}
+
+@keyframes headershift{
+
+    0%{ background-position: 0% 50%;}
+
+    50%{ background-position: 100% 50%;}
+
+    100%{ background-position: 0% 50%;}
+
+}
+
+h1{
+
+    font-size: 2rem;
+
+}
+
+
+.button-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 19px;
+
+}
+
+.button1{
+
+    width: 100px;
+    height: 100px;
+    background-image: url(pj.png);
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+.button1:hover{
+
+    text-shadow: 5px 5px 5px rgb(255, 0, 0);
+
+}
+
+.button3{
+
+    width: 100px;
+    height: 100px;
+    background-image: url(froggy.png);
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+.button3:hover{
+
+    text-shadow: 5px 5px 5px rgb(255, 0, 128);
+}
+
+.button4{
+
+    width: 100px;
+    height: 100px;
+    background-image: url(Sticker\ Print.png);
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+.button4:hover{
+
+    text-shadow: 5px 5px 5px rgb(3, 41, 90);
+
+}
+
+.banner{
+
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin-left: 140px;
+
+}
+
+.banner .slider{
+    
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 18%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: rotate 30s infinite linear;
+    z-index: 2;
+
+}
+
+@keyframes rotate{
+
+    from{transform: perspective(1000px) rotateZ(-5deg) rotateX(-10deg) rotateY(0deg);}
+    to{transform: perspective(1000px) rotateZ(-5deg) rotateX(-10deg) rotateY(360deg);}
+
+}
+
+
+.banner .slider .item{
+
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( ( var(--position) - 1) *(360 / var(--quantity)) * 1deg ))
+        translateZ(450px);
+
+}
+
+
+.banner .slider .item img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.model{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url(rook\ logo.png);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-left: 140px;
+    z-index: 0;
+
+}
+
+footer{
+
+    width: 100%;
+    background-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 5;
+
+}
